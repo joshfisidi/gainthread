@@ -1,0 +1,127 @@
+{
+    "generation": {
+      "conditions": [
+        {
+          "id": "is-generating",
+          "scriptName": "IsGenerating"
+        },
+        {
+          "id": "on-generation-start",
+          "scriptName": "OnGenerationStart",
+          "isTrigger": true
+        },
+        {
+          "id": "on-generation-complete",
+          "scriptName": "OnGenerationComplete",
+          "isTrigger": true
+        },
+        {
+          "id": "on-code-generation-complete",
+          "scriptName": "OnCodeGenerationComplete",
+          "isTrigger": true
+        },
+        {
+          "id": "on-object-generation-complete",
+          "scriptName": "OnObjectGenerationComplete",
+          "isTrigger": true
+        },
+        {
+          "id": "on-sprite-generation-complete",
+          "scriptName": "OnSpriteGenerationComplete",
+          "isTrigger": true
+        },
+        {
+          "id": "on-generation-error",
+          "scriptName": "OnGenerationError",
+          "isTrigger": true
+        }
+      ],
+      "actions": [
+        {
+          "id": "generate-code",
+          "scriptName": "GenerateCode",
+          "params": [
+            { "id": "prompt", "type": "string" }
+          ]
+        },
+        {
+          "id": "generate-object",
+          "scriptName": "GenerateObject",
+          "params": [
+            { "id": "prompt", "type": "string" }
+          ]
+        },
+        {
+          "id": "generate-sprite",
+          "scriptName": "GenerateSprite",
+          "params": [
+            { "id": "prompt", "type": "string" }
+          ]
+        },
+        {
+          "id": "generate-game",
+          "scriptName": "GenerateGame",
+          "params": [
+            { "id": "prompt", "type": "string" }
+          ]
+        },
+        {
+          "id": "cancel-generation",
+          "scriptName": "CancelGeneration"
+        },
+        {
+          "id": "set-api-key",
+          "scriptName": "SetApiKey",
+          "params": [
+            { "id": "key", "type": "string" }
+          ]
+        },
+        {
+          "id": "set-api-endpoint",
+          "scriptName": "SetApiEndpoint",
+          "params": [
+            { "id": "endpoint", "type": "string" }
+          ]
+        },
+        {
+          "id": "set-model",
+          "scriptName": "SetModel",
+          "params": [
+            { "id": "model", "type": "string" }
+          ]
+        },
+        {
+          "id": "set-system-prompt",
+          "scriptName": "SetSystemPrompt",
+          "params": [
+            { "id": "prompt", "type": "string" }
+          ]
+        }
+      ],
+      "expressions": [
+        {
+          "id": "get-result",
+          "expressionName": "GetResult",
+          "returnType": "string"
+        },
+        {
+          "id": "get-error",
+          "expressionName": "GetError",
+          "returnType": "string"
+        },
+        {
+          "id": "get-metadata",
+          "expressionName": "GetMetadata",
+          "returnType": "string",
+          "params": [
+            { "id": "key", "type": "string" }
+          ]
+        },
+        {
+          "id": "get-generation-type",
+          "expressionName": "GetGenerationType",
+          "returnType": "string"
+        }
+      ]
+    }
+  }

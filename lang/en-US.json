@@ -1,0 +1,217 @@
+{
+    "languageTag": "en-US",
+    "fileDescription": "Strings for MPC Game Generator.",
+    "text": {
+      "plugins": {
+        "mpc_gamegenerator": {
+          "name": "MPC Game Generator",
+          "description": "Generate games through natural language prompts using MPC technology",
+          "help-url": "https://github.com/joshfisidi/gainthread",
+          "properties": {
+            "api-key": {
+              "name": "API Key",
+              "desc": "Your MPC API key for authentication."
+            },
+            "api-endpoint": {
+              "name": "API Endpoint",
+              "desc": "The base URL for the MPC API service."
+            },
+            "model": {
+              "name": "Model",
+              "desc": "The AI model to use for generation.",
+              "items": {
+                "mpc-code": "MPC Code (for JavaScript generation)",
+                "mpc-game": "MPC Game (for game design)",
+                "mpc-sprite": "MPC Sprite (for asset generation)"
+              }
+            },
+            "system-prompt": {
+              "name": "System Prompt",
+              "desc": "Default system prompt for the AI model."
+            },
+            "temperature": {
+              "name": "Temperature",
+              "desc": "Controls randomness in generation (0.0-1.0). Higher values make output more random."
+            },
+            "max-tokens": {
+              "name": "Max Tokens",
+              "desc": "Maximum number of tokens to generate in response."
+            },
+            "auto-implement": {
+              "name": "Auto Implement",
+              "desc": "Automatically implement generated code and objects when possible."
+            }
+          },
+          "aceCategories": {
+            "generation": "Generation",
+            "management": "Management"
+          },
+          "conditions": {
+            "is-generating": {
+              "list-name": "Is generating",
+              "display-text": "Is currently generating content",
+              "description": "Check if the plugin is currently processing a generation request."
+            },
+            "on-generation-start": {
+              "list-name": "On generation start",
+              "display-text": "On generation start",
+              "description": "Triggered when a generation process begins."
+            },
+            "on-generation-complete": {
+              "list-name": "On generation complete",
+              "display-text": "On generation complete",
+              "description": "Triggered when the generation process completes successfully."
+            },
+            "on-code-generation-complete": {
+              "list-name": "On code generation complete",
+              "display-text": "On code generation complete",
+              "description": "Triggered when code generation completes successfully."
+            },
+            "on-object-generation-complete": {
+              "list-name": "On object generation complete",
+              "display-text": "On object generation complete",
+              "description": "Triggered when object generation completes successfully."
+            },
+            "on-sprite-generation-complete": {
+              "list-name": "On sprite generation complete",
+              "display-text": "On sprite generation complete",
+              "description": "Triggered when sprite generation completes successfully."
+            },
+            "on-generation-error": {
+              "list-name": "On generation error",
+              "display-text": "On generation error",
+              "description": "Triggered when an error occurs during generation."
+            }
+          },
+          "actions": {
+            "generate-code": {
+              "list-name": "Generate code",
+              "display-text": "Generate code with prompt {0}",
+              "description": "Generate JavaScript code based on a prompt.",
+              "params": {
+                "prompt": {
+                  "name": "Prompt",
+                  "desc": "The prompt to send to the AI model."
+                }
+              }
+            },
+            "generate-object": {
+              "list-name": "Generate game object",
+              "display-text": "Generate game object with prompt {0}",
+              "description": "Generate a Construct 3 game object based on a prompt.",
+              "params": {
+                "prompt": {
+                  "name": "Prompt",
+                  "desc": "The prompt to send to the AI model."
+                }
+              }
+            },
+            "generate-sprite": {
+              "list-name": "Generate sprite",
+              "display-text": "Generate sprite with prompt {0}",
+              "description": "Generate a sprite image based on a prompt.",
+              "params": {
+                "prompt": {
+                  "name": "Prompt",
+                  "desc": "The prompt to send to the AI model."
+                }
+              }
+            },
+            "generate-game": {
+              "list-name": "Generate complete game",
+              "display-text": "Generate complete game with prompt {0}",
+              "description": "Generate a complete game prototype based on a prompt.",
+              "params": {
+                "prompt": {
+                  "name": "Prompt",
+                  "desc": "The prompt to send to the AI model."
+                }
+              }
+            },
+            "cancel-generation": {
+              "list-name": "Cancel generation",
+              "display-text": "Cancel current generation",
+              "description": "Cancel the current generation process."
+            },
+            "set-api-key": {
+              "list-name": "Set API key",
+              "display-text": "Set API key to {0}",
+              "description": "Set the API key at runtime.",
+              "params": {
+                "key": {
+                  "name": "API Key",
+                  "desc": "The API key to use for authentication."
+                }
+              }
+            },
+            "set-api-endpoint": {
+              "list-name": "Set API endpoint",
+              "display-text": "Set API endpoint to {0}",
+              "description": "Set the API endpoint at runtime.",
+              "params": {
+                "endpoint": {
+                  "name": "API Endpoint",
+                  "desc": "The base URL for the API."
+                }
+              }
+            },
+            "set-model": {
+              "list-name": "Set model",
+              "display-text": "Set model to {0}",
+              "description": "Set the AI model at runtime.",
+              "params": {
+                "model": {
+                  "name": "Model",
+                  "desc": "The model to use (mpc-code, mpc-game, or mpc-sprite)."
+                }
+              }
+            },
+            "set-system-prompt": {
+              "list-name": "Set system prompt",
+              "display-text": "Set system prompt to {0}",
+              "description": "Set the system prompt at runtime.",
+              "params": {
+                "prompt": {
+                  "name": "System Prompt",
+                  "desc": "The system prompt to use."
+                }
+              }
+            }
+          },
+          "expressions": {
+            "get-result": {
+              "description": "Get the last generation result.",
+              "translated-name": "GetResult"
+            },
+            "get-error": {
+              "description": "Get the last error message.",
+              "translated-name": "GetError"
+            },
+            "get-metadata": {
+              "description": "Get metadata from the last generation result.",
+              "translated-name": "GetMetadata",
+              "params": {
+                "key": {
+                  "name": "Key",
+                  "desc": "The metadata key to retrieve."
+                }
+              }
+            },
+            "get-generation-type": {
+              "description": "Get the type of the last generation (code, object, sprite, or game).",
+              "translated-name": "GetGenerationType"
+            }
+          },
+          "debugger": {
+            "title": "MPC Game Generator",
+            "is-generating": "Is generating",
+            "generation-type": "Generation type",
+            "last-result": "Last result",
+            "last-error": "Last error",
+            "api-endpoint": "API endpoint",
+            "model": "Model"
+          }
+        }
+      }
+    }
+  }

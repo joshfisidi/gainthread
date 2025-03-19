@@ -1,0 +1,31 @@
+{
+    "is-c3-addon": true,
+    "sdk-version": 2,
+    "type": "plugin",
+    "name": "MPC Game Generator",
+    "id": "MPC_GameGenerator",
+    "version": "1.0.0.0",
+    "author": "Joshua J. Gomes",
+    "website": "https://github.com/joshfisidi/gainthread",
+    "documentation": "https://github.com/joshfisidi/gainthread",
+    "description": "Generate games through natural language prompts using MPC technology",
+    "editor-scripts": [
+      "plugin.js",
+      "type.js",
+      "instance.js"
+    ],
+    "file-list": [
+      "c3runtime/plugin.js",
+      "c3runtime/type.js",
+      "c3runtime/instance.js",
+      "c3runtime/main.js",
+      "c3runtime/domSide.js",
+      "lang/en-US.json",
+      "aces.json",
+      "addon.json",
+      "icon.svg",
+      "plugin.js",
+      "type.js",
+      "instance.js"
+    ]
+  }
